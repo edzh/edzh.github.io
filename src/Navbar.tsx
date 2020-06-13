@@ -11,21 +11,12 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="grid gap-2 grid-cols-3 col-span-2 my-auto text-center">
-          <div>
-            <NavLink activeClassName="text-blue-400" to="/about">
-              About
-            </NavLink>
-          </div>
-          <div>
+          <div className="col-start-2">
             <NavLink activeClassName="text-blue-400" to="/projects">
               Projects
             </NavLink>
           </div>
-          <div>
-            <NavLink activeClassName="text-blue-400" to="/contact">
-              Contact
-            </NavLink>
-          </div>
+          
         </div>
       </div>
     </div>
