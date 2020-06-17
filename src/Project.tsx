@@ -5,9 +5,10 @@ interface Props {
   website: string;
   images: string[];
   technologies: string[];
+  description: string;
 }
 
-const Project: React.FC<Props> = ({ name, website, images, technologies }) => {
+const Project: React.FC<Props> = ({ name, website, images, technologies, description }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hover, setHover] = useState(false);
   const imgRef = useRef<null | HTMLImageElement>(null);
@@ -22,7 +23,7 @@ const Project: React.FC<Props> = ({ name, website, images, technologies }) => {
   }, [currentIndex, images.length]);
 
   return (
-    <div className="grid-rows-3 text-center border rounded bg-white">
+    <div className="text-center border rounded bg-white">
       <div className="border-b">
         <a
           className="leading-loose hover:text-blue-400 text-blue-600"
@@ -70,11 +71,12 @@ const Project: React.FC<Props> = ({ name, website, images, technologies }) => {
           </>
         )}
       </div>
-      <div className="text-left px-4 py-2 grid grid-cols-3">
+      <div className="text-left px-4 py-2 grid grid-cols-3 border-b">
         {technologies.map((t) => (
           <div>{t}</div>
         ))}
       </div>
+      <div className="text-left px-4 py-2">{description}</div>
     </div>
   );
 };

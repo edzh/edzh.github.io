@@ -2,13 +2,13 @@ import React from "react";
 
 import Project from "./Project";
 
-import goflyfirst from "./img/goflyfirst.jpg";
-import chipo from "./img/chipo.jpg";
+const goflyfirst = "https://edwinzhou.s3.us-east-2.amazonaws.com/goflyfirst.jpg";
+const chipo = "https://edwinzhou.s3.us-east-2.amazonaws.com/chipo.jpg";
 
-import aftercaremanager from "./img/aftercaremanager.jpg";
-import aftercaremanager2 from "./img/aftercaremanager2.jpg";
-import aftercaremanager3 from "./img/aftercaremanager3.jpg";
-import aftercaremanager4 from "./img/aftercaremanager4.jpg";
+const aftercaremanager = "https://edwinzhou.s3.us-east-2.amazonaws.com/aftercaremanager.jpg";
+const aftercaremanager2 = "https://edwinzhou.s3.us-east-2.amazonaws.com/aftercaremanager2.jpg";
+const aftercaremanager3 = "https://edwinzhou.s3.us-east-2.amazonaws.com/aftercaremanager3.jpg";
+const aftercaremanager4 = "https://edwinzhou.s3.us-east-2.amazonaws.com/aftercaremanager4.jpg";
 
 const projects = [
   {
@@ -16,12 +16,14 @@ const projects = [
     website: "https://www.goflyfirst.com",
     images: [goflyfirst],
     technologies: ["React", "Express", "TailwindCSS"],
+    description: ""
   },
   {
     name: "Aftercare Manager",
     website: "https://aftercaremanage.herokuapp.com/",
     images: [aftercaremanager, aftercaremanager2, aftercaremanager3, aftercaremanager4],
     technologies: ["React", "Redux", "Express", "TailwindCSS", "MongoDB", "D3"],
+    description: ""
   },
   {
     name: "Chinese Poker",
@@ -34,6 +36,7 @@ const projects = [
       "TailwindCSS",
       "WebSocket",
     ],
+    description: ""
   },
 ];
 
@@ -46,6 +49,7 @@ const Projects: React.FC = () => {
           website={p.website}
           images={p.images}
           technologies={p.technologies}
+          description={p.description}
         />
       ))}
     </div>
